@@ -88,5 +88,25 @@ namespace DevelopmentChallenge.Data.Tests
                 "<h1>Reporte de Formas</h1>2 Cuadrados | Area 29 | Perimetro 28 <br/>2 Círculos | Area 13,01 | Perimetro 18,06 <br/>3 Triángulos | Area 49,64 | Perimetro 51,6 <br/>TOTAL:<br/>7 formas Perimetro 97,66 Area 91,65",
                 resumen);
         }
+
+        [TestCase]
+        public void TestResumenListaConUnRectangulo()
+        {
+            var rectangulos = new List<FormaGeometrica> { new FormaGeometrica(FormaGeometrica.Rectangulo, 3, 4) };
+
+            var resumen = FormaGeometrica.Imprimir(rectangulos, FormaGeometrica.Castellano);
+
+            Assert.AreEqual("<h1>Reporte de Formas</h1>1 Rectángulo | Area 12 | Perimetro 14 <br/>TOTAL:<br/>1 formas Perimetro 14 Area 12", resumen);
+        }
+
+        [TestCase]
+        public void TestResumenListaConUnTrapecio()
+        {
+            var trapecios = new List<FormaGeometrica> { new FormaGeometrica(FormaGeometrica.Trapecio, 10m, 6m, 4m) };
+
+            var resumen = FormaGeometrica.Imprimir(trapecios, FormaGeometrica.Castellano);
+
+            Assert.AreEqual("<h1>Reporte de Formas</h1>1 Trapecio | Area 32 | Perimetro 24,94 <br/>TOTAL:<br/>1 formas Perimetro 24,94 Area 32", resumen);
+        }
     }
 }

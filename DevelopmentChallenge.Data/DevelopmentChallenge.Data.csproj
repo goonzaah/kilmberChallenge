@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DevelopmentChallenge.Data</RootNamespace>
     <AssemblyName>DevelopmentChallenge.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -44,7 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\FormaFactory.cs" />
     <Compile Include="Classes\FormaGeometrica.cs" />
+    <Compile Include="Classes\Formas\Circulo.cs" />
+    <Compile Include="Classes\Formas\Cuadrado.cs" />
+    <Compile Include="Classes\Formas\Rectangulo.cs" />
+    <Compile Include="Classes\Formas\Trapecio.cs" />
+    <Compile Include="Classes\Formas\TrianguloEquilatero.cs" />
+    <Compile Include="Classes\IForma.cs" />
+    <Compile Include="Helpers\IdiomaHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
